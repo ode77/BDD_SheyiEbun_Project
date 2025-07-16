@@ -26,8 +26,16 @@ public class UKBAVisaChecksStepDef {
     }
     @When("I click on Accept additional cookies")
     public void iClickOnAcceptAdditionalCookies() {
+        try{
         WebElement clickOnCokies = driver.findElement(By.xpath("//button[@data-accept-cookies='true']"));
-        clickOnCokies.click();
+            if (clickOnCokies.isDisplayed()) {
+                clickOnCokies.click();
+                System.out.println("Cookies accepted.");
+            }
+        } catch (Exception e) {
+            // Cookie popup not found or not displayed
+            System.out.println("No cookie popup found. Continuing test...");
+        }
     }
     @Then("the Check if you need a UK visa page is displayed")
     public void theCheckIfYouNeedAUKVisaPageIsDisplayed() {

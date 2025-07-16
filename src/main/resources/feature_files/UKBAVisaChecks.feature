@@ -1,4 +1,4 @@
-@UKBA
+@UKBA1
 Feature: Check Visa Eligibility
 
   Background:
@@ -27,6 +27,8 @@ Feature: Check Visa Eligibility
       | Canada      | You’ll need a visa to study in the UK |
 
 
+
+#  @UKBA2
   Scenario Outline: Nationalities and Tourism
 #    Given I am on UKba Website
 #    When I click on Accept additional cookies
