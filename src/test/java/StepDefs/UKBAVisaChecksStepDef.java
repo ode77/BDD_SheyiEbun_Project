@@ -77,7 +77,7 @@ public class UKBAVisaChecksStepDef {
     @Then("I should get a respond {string} as coming to UK")
     public void i_should_get_a_respond_as_coming_to_uk(String mssge) {
         // Write code here that turns the phrase above into concrete actions
-        WebElement getResponseMessage = driver.findElement(By.xpath("//h2[@class='gem-c-heading__text gem-c-heading--font-size-27']"));
+        WebElement getResponseMessage = driver.findElement(By.xpath("(//h2[@class='gem-c-heading__text govuk-heading-m'])[1]"));
         assertThat(getResponseMessage.getText(),is(equalTo(mssge)));
 
     }
@@ -99,7 +99,7 @@ public class UKBAVisaChecksStepDef {
     }
     @Then("I should get a {string} as coming to UK")
     public void iShouldGetAAsComingToUK(String mssge) {
-        WebElement getInformedMessage = driver.findElement(By.xpath("//h2[@class='gem-c-heading__text gem-c-heading--font-size-27']"));
+        WebElement getInformedMessage = driver.findElement(By.xpath("//h2[@class='gem-c-heading__text govuk-heading-m']"));
         assertThat(getInformedMessage.getText(),is(equalTo(mssge)));
 
     }
